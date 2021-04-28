@@ -14,6 +14,8 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <mybatis.generator.overwrite>true</mybatis.generator.overwrite>
+        <mybatis.generator.tableNames>camps_user_detail</mybatis.generator.tableNames>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>

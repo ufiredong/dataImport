@@ -3,6 +3,6 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/:3306/mydb?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://8.136.110.11:3306/camps_wlan?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456

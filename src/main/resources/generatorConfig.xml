@@ -50,7 +50,7 @@
 	</commentGenerator>
 
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-        connectionURL="jdbc:mysql://127.0.0.1:3306/mydb?characterEncoding=utf8&amp;useInformationSchema=True"
+        connectionURL="jdbc:mysql://8.136.110.11:3306/camps_wlan?characterEncoding=utf8&amp;useInformationSchema=True"
         userId="root"
         password="123456">
     </jdbcConnection>
@@ -76,5 +76,7 @@
     </javaClientGenerator>
 
 	  <table schema="" tableName="data" domainObjectName="Data"></table>
+	  <table schema="" tableName="camps_user" domainObjectName="CampsUser"></table>
+	  <table schema="" tableName="camps_user_detail" domainObjectName="CampsUserDetail"></table>
   </context>
 </generatorConfiguration>

@@ -1,8 +1,11 @@
 package com.excel.controller;
 
 import com.alibaba.excel.EasyExcel;
+import com.excel.dto.CampsUserDetailDto;
+import com.excel.dto.CampsUserDetailDtoListenner;
 import com.excel.dto.DataDto;
 import com.excel.dto.DataDtoListener;
+import com.excel.service.CampsUserDetailService;
 import com.excel.service.DataService;
 import com.excel.utils.TimeUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -20,12 +23,12 @@ import java.io.IOException;
 @Slf4j
 public class ImportController {
     @Autowired
-    DataService dataService;
+    CampsUserDetailService campsUserDetailService;
 
     @PostMapping(value = "/importExcel")
     public String importExcel(@RequestParam MultipartFile excelFile) throws IOException {
         Long beginTime = System.currentTimeMillis();
-        EasyExcel.read(excelFile.getInputStream(), DataDto.class, new DataDtoListener(dataService)).sheet().doRead();
+        EasyExcel.read(excelFile.getInputStream(), CampsUserDetailDto.class, new CampsUserDetailDtoListenner(campsUserDetailService)).sheet().doRead();
         Long endTime = System.currentTimeMillis();
         return TimeUtils.getTime(endTime - beginTime);
     }
